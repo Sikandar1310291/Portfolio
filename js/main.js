@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slideWidth = slides[0].getBoundingClientRect().width;
 
-    // Arrange slides next to one another
     const setSlidePosition = (slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     };
@@ -37,63 +36,38 @@ document.addEventListener('DOMContentLoaded', () => {
         targetDot.classList.add('active');
     };
 
-    const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-        // Continuous loop, so we don't hide arrows
-        // But if we wanted to:
-        // if (targetIndex === 0) {
-        //     prevButton.classList.add('is-hidden');
-        //     nextButton.classList.remove('is-hidden');
-        // } else if (targetIndex === slides.length - 1) {
-        //     prevButton.classList.remove('is-hidden');
-        //     nextButton.classList.add('is-hidden');
-        // } else {
-        //     prevButton.classList.remove('is-hidden');
-        //     nextButton.classList.remove('is-hidden');
-        // }
-    };
-
-    // Next Button Click
     nextButton.addEventListener('click', e => {
         const currentSlide = track.querySelector('.current-slide');
         let nextSlide = currentSlide.nextElementSibling;
         const currentDot = dotsNav.querySelector('.active');
         let nextDot = currentDot.nextElementSibling;
-        let nextIndex = slides.indexOf(nextSlide);
 
-        // Loop back to start
         if (!nextSlide) {
             nextSlide = slides[0];
             nextDot = dots[0];
-            nextIndex = 0;
         }
 
         moveToSlide(track, currentSlide, nextSlide);
         updateDots(currentDot, nextDot);
     });
 
-    // Prev Button Click
     prevButton.addEventListener('click', e => {
         const currentSlide = track.querySelector('.current-slide');
         let prevSlide = currentSlide.previousElementSibling;
         const currentDot = dotsNav.querySelector('.active');
         let prevDot = currentDot.previousElementSibling;
-        let prevIndex = slides.indexOf(prevSlide);
 
-        // Loop to end
         if (!prevSlide) {
             prevSlide = slides[slides.length - 1];
             prevDot = dots[dots.length - 1];
-            prevIndex = slides.length - 1;
         }
 
         moveToSlide(track, currentSlide, prevSlide);
         updateDots(currentDot, prevDot);
     });
 
-    // Dot Nav Click
     dotsNav.addEventListener('click', e => {
         const targetDot = e.target.closest('button');
-
         if (!targetDot) return;
 
         const currentSlide = track.querySelector('.current-slide');
@@ -105,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDots(currentDot, targetDot);
     });
 
-    // Auto Play
     setInterval(() => {
         const currentSlide = track.querySelector('.current-slide');
         let nextSlide = currentSlide.nextElementSibling;
@@ -119,9 +92,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
         moveToSlide(track, currentSlide, nextSlide);
         updateDots(currentDot, nextDot);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
-    // Video Playback Handling
-    // Ensure the video in the active slide is playing, others are paused?
-    // Doing this might be resource intensive but 'autoplay' attribute handles it mostly.
+    /* =========================================
+       "Tech Wave" Animation
+       ========================================= */
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            init();
+        }
+        window.addEventListener('resize', resize);
+
+        // Config
+        const particleCount = 200; // Dense wave
+        const waveSpeed = 0.02;
+        const waveAmplitude = 50;
+        const waveFrequency = 0.01;
+
+        function init() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: height / 2, // Start in middle
+                    baseY: (Math.random() * height * 0.5) + (height * 0.25), // Spread vertically
+                    size: Math.random() * 2,
+                    speed: (Math.random() * 0.5) + 0.2,
+                    offset: Math.random() * 100 // Phase offset
+                });
+            }
+        }
+        init();
+
+        let time = 0;
+
+        function animate() {
+            // Trail effect (optional, or clear completely)
+            // ctx.clearRect(0, 0, width, height); 
+            ctx.fillStyle = 'rgba(10, 10, 10, 0.2)'; // Heavy trail for smooth flow look
+            ctx.fillRect(0, 0, width, height);
+
+            time += waveSpeed;
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+
+                // 3D Wave Formula
+                // Combine Sine waves
+                p.y = p.baseY +
+                    Math.sin(p.x * waveFrequency + time + p.offset) * waveAmplitude * Math.sin(time * 0.5);
+
+                // Move horizontally
+                p.x += p.speed;
+                if (p.x > width) p.x = 0;
+
+                // Draw
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+
+                // Color gradient based on X position
+                const ratio = p.x / width;
+                // Purple (139, 92, 246) to Blue (6, 182, 212)
+                const r = 139 + (6 - 139) * ratio;
+                const g = 92 + (182 - 92) * ratio;
+                const b = 246 + (212 - 246) * ratio;
+
+                ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.8)`;
+                ctx.fill();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
 });
