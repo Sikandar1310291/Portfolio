@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio of an AI Engineer and Data Scientist specializing in Machine Learning, Deep Learning, and building intelligent systems.">
-    <title>AI Engineer & Data Scientist | Portfolio</title>
+        content="Portfolio of an AI Engineer and ML Engineer specializing in Machine Learning, Deep Learning, and building intelligent systems.">
+    <title>AI Engineer & ML Engineer | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -24,14 +25,13 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-profile">
-                <img src="assets/images/avatar-cartoon.jpg" alt="Awais" class="nav-avatar">
+                <img src="assets/images/avatar-cartoon.jpg" alt="Awais" class="nav-avatar" loading="lazy">
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Get in Touch</a>
@@ -52,7 +52,7 @@
             </div>
             <h1 class="hero-title">
                 <span class="title-line">AI Engineer</span>
-                <span class="title-line gradient-text">&amp; Data Scientist</span>
+                <span class="title-line gradient-text">&amp; ML Engineer</span>
             </h1>
             <p class="hero-description">
                 I build intelligent systems that transform data into actionable insights.
@@ -113,7 +113,7 @@
                         <!-- Slide 1: AI Tour Planner -->
                         <li class="carousel-slide current-slide">
                             <div class="carousel-video-wrapper">
-                                <video autoplay muted loop playsinline>
+                                <video preload="none" class="lazy-video" muted loop playsinline>
                                     <source src="assets/videos/project1.mp4" type="video/mp4">
                                 </video>
                                 <div class="slide-overlay">
@@ -137,7 +137,7 @@
                         <!-- Slide 2: AI Trading Chatbot -->
                         <li class="carousel-slide">
                             <div class="carousel-video-wrapper">
-                                <video autoplay muted loop playsinline>
+                                <video preload="none" class="lazy-video" muted loop playsinline>
                                     <source src="assets/videos/project2.mp4" type="video/mp4">
                                 </video>
                                 <div class="slide-overlay">
@@ -161,7 +161,7 @@
                         <!-- Slide 3: AI Shopping Assistant -->
                         <li class="carousel-slide">
                             <div class="carousel-video-wrapper">
-                                <video autoplay muted loop playsinline>
+                                <video preload="none" class="lazy-video" muted loop playsinline>
                                     <source src="assets/videos/project3.mp4" type="video/mp4">
                                 </video>
                                 <div class="slide-overlay">
@@ -186,7 +186,7 @@
                         <!-- Slide 4: Medical VQA System -->
                         <li class="carousel-slide">
                             <div class="carousel-video-wrapper">
-                                <video autoplay muted loop playsinline>
+                                <video preload="none" class="lazy-video" muted loop playsinline>
                                     <source src="assets/videos/project4.mp4" type="video/mp4">
                                 </video>
                                 <div class="slide-overlay">
@@ -202,7 +202,7 @@
                         <!-- Slide 5: AI Code Fixer -->
                         <li class="carousel-slide">
                             <div class="carousel-video-wrapper">
-                                <video autoplay muted loop playsinline>
+                                <video preload="none" class="lazy-video" muted loop playsinline>
                                     <source src="assets/videos/project6.webm" type="video/webm">
                                 </video>
                                 <div class="slide-overlay">
@@ -210,6 +210,52 @@
                                     <h3 class="slide-title">AI Code Fixer</h3>
                                     <p class="slide-description">Automated code debugging and optimization tool using
                                         LLMs.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Slide 6: PakAI Capital -->
+                        <li class="carousel-slide">
+                            <div class="carousel-video-wrapper">
+                                <video preload="none" class="lazy-video" muted loop playsinline>
+                                    <source src="assets/videos/PakAI Capital – Autonomous Trading System.mp4" type="video/mp4">
+                                </video>
+                                <div class="slide-overlay">
+                                    <span class="slide-badge">FinTech & AI</span>
+                                    <h3 class="slide-title">PakAI Capital – Autonomous Trading System</h3>
+                                    <p class="slide-description">An autonomous AI trading system for the Pakistan Stock Exchange.</p>
+                                    <a href="https://psx-ai-trading-agents-hackathon.vercel.app/" target="_blank" class="view-project-btn">
+                                        View Project
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Slide 7: AI News Facts Checker -->
+                        <li class="carousel-slide">
+                            <div class="carousel-video-wrapper">
+                                <video preload="none" class="lazy-video" muted loop playsinline>
+                                    <source src="assets/videos/Ai News Facts Checker.mp4" type="video/mp4">
+                                </video>
+                                <div class="slide-overlay">
+                                    <span class="slide-badge">AI & Media</span>
+                                    <h3 class="slide-title">Ai News Facts Checker</h3>
+                                    <p class="slide-description">A tool to automatically fact-check news using AI.</p>
+                                    <a href="https://github.com/kirilligum/newsfacts-arc-hackathon-260123" target="_blank" class="view-project-btn">
+                                        View Project
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -236,27 +282,11 @@
                 <button class="dot"></button>
                 <button class="dot"></button>
                 <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
             </div>
 
-            <!-- Stats from Screenshot -->
-            <div class="project-stats">
-                <div class="stat-item">
-                    <span class="p-stat-number">10+</span>
-                    <span class="stat-label">Awards</span>
-                </div>
-                <div class="stat-item">
-                    <span class="p-stat-number">50+</span>
-                    <span class="stat-label">Clients</span>
-                </div>
-                <div class="stat-item">
-                    <span class="p-stat-number">98%</span>
-                    <span class="stat-label">Success Rate</span>
-                </div>
-                <div class="stat-item">
-                    <span class="p-stat-number">100+</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-            </div>
+            <!-- Stats removed -->
         </div>
     </section>
 
@@ -266,17 +296,17 @@
             <div class="about-grid">
                 <div class="about-image">
                     <div class="image-wrapper float-animation">
-                        <img src="assets/images/awais-professional.jpg" alt="Muhammad Awais - Professional Photo"
-                            class="profile-image">
+                        <img src="assets/images/awais.png" alt="Muhammad Awais - Professional Photo"
+                            class="profile-image" loading="lazy">
                     </div>
                 </div>
                 <div class="about-content">
                     <h2 class="section-subtitle">About Me</h2>
                     <h3 class="about-title">Hi, I'm <span class="gradient-text">Muhammad Awais</span> — AI Engineer &
-                        Data
-                        Scientist</h3>
+                        ML
+                        Engineer</h3>
                     <p class="about-text">
-                        I'm a passionate AI Engineer and Data Scientist with expertise in building
+                        I'm a passionate AI Engineer and ML Engineer with expertise in building
                         end-to-end machine learning solutions. From data preprocessing to model deployment,
                         I specialize in creating intelligent systems that solve real-world problems.
                     </p>
@@ -320,63 +350,63 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                alt="Python">
+                                alt="Python" loading="lazy">
                         </div>
                         <span class="skill-name">Python</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-                                alt="TensorFlow">
+                                alt="TensorFlow" loading="lazy">
                         </div>
                         <span class="skill-name">TensorFlow</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
-                                alt="PyTorch">
+                                alt="PyTorch" loading="lazy">
                         </div>
                         <span class="skill-name">PyTorch</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"
-                                alt="Keras">
+                                alt="Keras" loading="lazy">
                         </div>
                         <span class="skill-name">Keras</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                                alt="Scikit-learn">
+                                alt="Scikit-learn" loading="lazy">
                         </div>
                         <span class="skill-name">Scikit-learn</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
-                                alt="Pandas">
+                                alt="Pandas" loading="lazy">
                         </div>
                         <span class="skill-name">Pandas</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                                alt="NumPy">
+                                alt="NumPy" loading="lazy">
                         </div>
                         <span class="skill-name">NumPy</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-                                alt="Hugging Face">
+                                alt="Hugging Face" loading="lazy">
                         </div>
                         <span class="skill-name">Hugging Face</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langchain.svg"
-                                alt="LangChain" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="LangChain" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">LangChain</span>
                     </div>
@@ -392,21 +422,21 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/llamaindex.svg"
-                                alt="LlamaIndex" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="LlamaIndex" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">LlamaIndex</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/pinecone/icon.svg"
-                                alt="Pinecone" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="Pinecone" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">Pinecone</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
-                                alt="OpenCV">
+                                alt="OpenCV" loading="lazy">
                         </div>
                         <span class="skill-name">OpenCV</span>
                     </div>
@@ -415,63 +445,63 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                alt="Python">
+                                alt="Python" loading="lazy">
                         </div>
                         <span class="skill-name">Python</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-                                alt="TensorFlow">
+                                alt="TensorFlow" loading="lazy">
                         </div>
                         <span class="skill-name">TensorFlow</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
-                                alt="PyTorch">
+                                alt="PyTorch" loading="lazy">
                         </div>
                         <span class="skill-name">PyTorch</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"
-                                alt="Keras">
+                                alt="Keras" loading="lazy">
                         </div>
                         <span class="skill-name">Keras</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                                alt="Scikit-learn">
+                                alt="Scikit-learn" loading="lazy">
                         </div>
                         <span class="skill-name">Scikit-learn</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
-                                alt="Pandas">
+                                alt="Pandas" loading="lazy">
                         </div>
                         <span class="skill-name">Pandas</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
-                                alt="NumPy">
+                                alt="NumPy" loading="lazy">
                         </div>
                         <span class="skill-name">NumPy</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-                                alt="Hugging Face">
+                                alt="Hugging Face" loading="lazy">
                         </div>
                         <span class="skill-name">Hugging Face</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langchain.svg"
-                                alt="LangChain" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="LangChain" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">LangChain</span>
                     </div>
@@ -487,21 +517,21 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/llamaindex.svg"
-                                alt="LlamaIndex" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="LlamaIndex" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">LlamaIndex</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/pinecone/icon.svg"
-                                alt="Pinecone" style="background: white; border-radius: 50%; padding: 2px;">
+                                alt="Pinecone" style="background: white; border-radius: 50%; padding: 2px;" loading="lazy">
                         </div>
                         <span class="skill-name">Pinecone</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
-                                alt="OpenCV">
+                                alt="OpenCV" loading="lazy">
                         </div>
                         <span class="skill-name">OpenCV</span>
                     </div>
@@ -515,110 +545,110 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
-                                alt="Spark">
+                                alt="Spark" loading="lazy">
                         </div>
                         <span class="skill-name">Apache Spark</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                                alt="AWS" style="transform: scale(1.5);">
+                                alt="AWS" style="transform: scale(1.5);" loading="lazy">
                         </div>
                         <span class="skill-name">AWS</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-                                alt="Azure">
+                                alt="Azure" loading="lazy">
                         </div>
                         <span class="skill-name">Azure</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                                alt="GCP">
+                                alt="GCP" loading="lazy">
                         </div>
                         <span class="skill-name">GCP</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                                alt="FastAPI">
+                                alt="FastAPI" loading="lazy">
                         </div>
                         <span class="skill-name">FastAPI</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                alt="Docker">
+                                alt="Docker" loading="lazy">
                         </div>
                         <span class="skill-name">Docker</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                                alt="Kubernetes">
+                                alt="Kubernetes" loading="lazy">
                         </div>
                         <span class="skill-name">Kubernetes</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                alt="PostgreSQL">
+                                alt="PostgreSQL" loading="lazy">
                         </div>
                         <span class="skill-name">PostgreSQL</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                alt="MongoDB">
+                                alt="MongoDB" loading="lazy">
                         </div>
                         <span class="skill-name">MongoDB</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                alt="Git">
+                                alt="Git" loading="lazy">
                         </div>
                         <span class="skill-name">Git</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-                                alt="Linux">
+                                alt="Linux" loading="lazy">
                         </div>
                         <span class="skill-name">Linux</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
-                            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau">
+                            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" loading="lazy">
                         </div>
                         <span class="skill-name">Tableau</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-                                alt="Power BI">
+                                alt="Power BI" loading="lazy">
                         </div>
                         <span class="skill-name">Power BI</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg"
-                                alt="Matplotlib">
+                                alt="Matplotlib" loading="lazy">
                         </div>
                         <span class="skill-name">Matplotlib</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
-                            <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" alt="Seaborn">
+                            <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" alt="Seaborn" loading="lazy">
                         </div>
                         <span class="skill-name">Seaborn</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg"
-                                alt="Plotly">
+                                alt="Plotly" loading="lazy">
                         </div>
                         <span class="skill-name">Plotly</span>
                     </div>
@@ -627,110 +657,110 @@
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
-                                alt="Spark">
+                                alt="Spark" loading="lazy">
                         </div>
                         <span class="skill-name">Apache Spark</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
-                                alt="AWS" style="transform: scale(1.5);">
+                                alt="AWS" style="transform: scale(1.5);" loading="lazy">
                         </div>
                         <span class="skill-name">AWS</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-                                alt="Azure">
+                                alt="Azure" loading="lazy">
                         </div>
                         <span class="skill-name">Azure</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                                alt="GCP">
+                                alt="GCP" loading="lazy">
                         </div>
                         <span class="skill-name">GCP</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                                alt="FastAPI">
+                                alt="FastAPI" loading="lazy">
                         </div>
                         <span class="skill-name">FastAPI</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                alt="Docker">
+                                alt="Docker" loading="lazy">
                         </div>
                         <span class="skill-name">Docker</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                                alt="Kubernetes">
+                                alt="Kubernetes" loading="lazy">
                         </div>
                         <span class="skill-name">Kubernetes</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                alt="PostgreSQL">
+                                alt="PostgreSQL" loading="lazy">
                         </div>
                         <span class="skill-name">PostgreSQL</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                alt="MongoDB">
+                                alt="MongoDB" loading="lazy">
                         </div>
                         <span class="skill-name">MongoDB</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                alt="Git">
+                                alt="Git" loading="lazy">
                         </div>
                         <span class="skill-name">Git</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-                                alt="Linux">
+                                alt="Linux" loading="lazy">
                         </div>
                         <span class="skill-name">Linux</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
-                            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau">
+                            <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" loading="lazy">
                         </div>
                         <span class="skill-name">Tableau</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-                                alt="Power BI">
+                                alt="Power BI" loading="lazy">
                         </div>
                         <span class="skill-name">Power BI</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg"
-                                alt="Matplotlib">
+                                alt="Matplotlib" loading="lazy">
                         </div>
                         <span class="skill-name">Matplotlib</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
-                            <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" alt="Seaborn">
+                            <img src="https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" alt="Seaborn" loading="lazy">
                         </div>
                         <span class="skill-name">Seaborn</span>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg"
-                                alt="Plotly">
+                                alt="Plotly" loading="lazy">
                         </div>
                         <span class="skill-name">Plotly</span>
                     </div>
@@ -754,10 +784,10 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <h4 class="timeline-title">AI Engineer and Data Scientist</h4>
-                                <p class="timeline-company">Codveda Technologies</p>
+                                <h4 class="timeline-title">AI and ML Engineer</h4>
+                                <p class="timeline-company">Techloset Solutions</p>
                             </div>
-                            <span class="timeline-date">Present</span>
+                            <span class="timeline-date">01-June-2025 to 01-March-2026</span>
                         </div>
                         <p class="timeline-description">
                             Design and implement advanced AI solutions and data-driven strategies.
@@ -791,7 +821,7 @@
                 <!-- Project 1: AI Tour Planner -->
                 <div class="project-card">
                     <div class="project-image">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" class="lazy-video" muted loop playsinline>
                             <source src="assets/videos/project1.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -831,7 +861,7 @@
                 <!-- Project 2: AI Trading Chatbot -->
                 <div class="project-card">
                     <div class="project-image">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" class="lazy-video" muted loop playsinline>
                             <source src="assets/videos/project2.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -871,7 +901,7 @@
                 <!-- Project 3: AI Shopping Assistant -->
                 <div class="project-card">
                     <div class="project-image">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" class="lazy-video" muted loop playsinline>
                             <source src="assets/videos/project3.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -911,7 +941,7 @@
                 <!-- Project 4: Medical VQA System -->
                 <div class="project-card">
                     <div class="project-image">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" class="lazy-video" muted loop playsinline>
                             <source src="assets/videos/project4.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -951,7 +981,7 @@
                 <!-- Project 6: AI Code Fixer -->
                 <div class="project-card">
                     <div class="project-image">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" class="lazy-video" muted loop playsinline>
                             <source src="assets/videos/project6.webm" type="video/webm">
                         </video>
                     </div>
@@ -982,6 +1012,75 @@
                                     <line x1="10" y1="14" x2="21" y2="3" />
                                 </svg>
                                 Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: PakAI Capital -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <video preload="none" class="lazy-video" muted loop playsinline>
+                            <source src="assets/videos/PakAI Capital – Autonomous Trading System.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">PakAI Capital – Autonomous Trading System</h4>
+                        <p class="project-description">
+                            An autonomous AI trading system for the Pakistan Stock Exchange.
+                        </p>
+                        <div class="project-tags">
+                            <span>FinTech</span>
+                            <span>AI Agents</span>
+                            <span>Trading</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulrehman-work/psx-ai-trading-agents-hackathon" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                Code
+                            </a>
+                            <a href="https://psx-ai-trading-agents-hackathon.vercel.app/" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: AI News Facts Checker -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <video preload="none" class="lazy-video" muted loop playsinline>
+                            <source src="assets/videos/Ai News Facts Checker.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title">Ai News Facts Checker</h4>
+                        <p class="project-description">
+                            A tool to automatically fact-check news using AI.
+                        </p>
+                        <div class="project-tags">
+                            <span>AI Verification</span>
+                            <span>NLP</span>
+                            <span>Media</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/kirilligum/newsfacts-arc-hackathon-260123" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                Code
                             </a>
                         </div>
                     </div>
@@ -1083,10 +1182,114 @@
                 <p class="section-description">Professional certifications and achievements</p>
             </div>
             <div class="certifications-grid">
+                <!-- Stanford University - Section Leader -->
+                <div class="certification-card">
+                    <div class="certification-image">
+                        <img src="assets/images/stanford.jpg" alt="Stanford University - Code in Place Section Leader" loading="lazy">
+                        <div class="cert-overlay">
+                            <span class="cert-badge">Stanford</span>
+                        </div>
+                    </div>
+                    <div class="certification-content">
+                        <h4 class="certification-title">Code in Place — Section Leader</h4>
+                        <p class="certification-issuer">Issued by Stanford University</p>
+                        <div class="certification-footer">
+                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_sectionleader-stanfordonline-codeinplace-activity-7475450705001078784-yQZz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                                target="_blank" class="btn-text-icon">
+                                <span>View Certificate</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harvard University - CS50 Puzzle Day -->
+                <div class="certification-card">
+                    <div class="certification-image">
+                        <img src="assets/images/harvard.jpg" alt="Harvard University - CS50 Puzzle Day" loading="lazy">
+                        <div class="cert-overlay">
+                            <span class="cert-badge">Harvard</span>
+                        </div>
+                    </div>
+                    <div class="certification-content">
+                        <h4 class="certification-title">CS50 Puzzle Day 2026</h4>
+                        <p class="certification-issuer">Issued by Harvard University</p>
+                        <div class="certification-footer">
+                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_cs50-harvarduniversity-puzzleday2026-activity-7475273751853707265-eiqn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                                target="_blank" class="btn-text-icon">
+                                <span>View Certificate</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calico Coding Competition (UC Berkeley) -->
+                <div class="certification-card">
+                    <div class="certification-image">
+                        <img src="assets/images/calico-cert.jpg" alt="Calico Coding Competition" loading="lazy">
+                        <div class="cert-overlay">
+                            <span class="cert-badge">UC Berkeley</span>
+                        </div>
+                    </div>
+                    <div class="certification-content">
+                        <h4 class="certification-title">Calico Coding Competition</h4>
+                        <p class="certification-issuer">Issued by UC Berkeley (Calico)</p>
+                        <div class="certification-footer">
+                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_calico2025-nextgenbuilders-codingcompetition-activity-7406317838761816064-0fgg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                                target="_blank" class="btn-text-icon">
+                                <span>View Certificate</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta Hacker Cup -->
+                <div class="certification-card">
+                    <div class="certification-image">
+                        <img src="assets/images/meta-cert.jpg" alt="Meta Hacker Cup" loading="lazy">
+                        <div class="cert-overlay">
+                            <span class="cert-badge">Competition</span>
+                        </div>
+                    </div>
+                    <div class="certification-content">
+                        <h4 class="certification-title">Meta Hacker Cup</h4>
+                        <p class="certification-issuer">Issued by Meta</p>
+                        <div class="certification-footer">
+                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_metahackercup-meta-programming-activity-7395764491256401920-rImP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                                target="_blank" class="btn-text-icon">
+                                <span>View Certificate</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Trae AI Hackathon -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/trae-ai-cert.png" alt="Trae AI IDE: Zero Limits Hackathon">
+                        <img src="assets/images/trae-ai-cert.png" alt="Trae AI IDE: Zero Limits Hackathon" loading="lazy">
 
                     </div>
                     <div class="certification-content">
@@ -1110,7 +1313,7 @@
                 <!-- RAISE YOUR HACK -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/raise-cert.png" alt="RAISE YOUR HACK">
+                        <img src="assets/images/raise-cert.png" alt="RAISE YOUR HACK" loading="lazy">
 
                     </div>
                     <div class="certification-content">
@@ -1134,7 +1337,7 @@
                 <!-- execute: AI Genesis -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/ai-genesis-cert.png" alt="execute: AI Genesis">
+                        <img src="assets/images/ai-genesis-cert.png" alt="execute: AI Genesis" loading="lazy">
 
                     </div>
                     <div class="certification-content">
@@ -1158,7 +1361,7 @@
                 <!-- Co-Creating with GPT-5 Hackathon -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/gpt5-cert.png" alt="Co-Creating with GPT-5 Hackathon">
+                        <img src="assets/images/gpt5-cert.png" alt="Co-Creating with GPT-5 Hackathon" loading="lazy">
                     </div>
                     <div class="certification-content">
                         <h4 class="certification-title">Co-Creating with GPT-5 Hackathon</h4>
@@ -1181,7 +1384,7 @@
                 <!-- Internet of Agents Hackathon -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/ioa-cert.png" alt="Internet of Agents Hackathon">
+                        <img src="assets/images/ioa-cert.png" alt="Internet of Agents Hackathon" loading="lazy">
 
                     </div>
                     <div class="certification-content">
@@ -1205,7 +1408,7 @@
                 <!-- AI Agents on Arc with USDC -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/usdc-cert.png" alt="AI Agents on Arc with USDC">
+                        <img src="assets/images/usdc-cert.png" alt="AI Agents on Arc with USDC" loading="lazy">
                     </div>
                     <div class="certification-content">
                         <h4 class="certification-title">AI Agents on Arc with USDC</h4>
@@ -1228,7 +1431,7 @@
                 <!-- AI Genesis -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/ai-genesis-original-cert.png" alt="AI Genesis">
+                        <img src="assets/images/ai-genesis-original-cert.png" alt="AI Genesis" loading="lazy">
                     </div>
                     <div class="certification-content">
                         <h4 class="certification-title">AI Genesis</h4>
@@ -1252,7 +1455,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <img src="assets/images/watsonx-cert.png"
-                            alt="Agentic AI Hackathon with IBM watsonx Orchestrate">
+                            alt="Agentic AI Hackathon with IBM watsonx Orchestrate" loading="lazy">
                     </div>
                     <div class="certification-content">
                         <h4 class="certification-title">Agentic AI Hackathon with IBM watsonx Orchestrate</h4>
@@ -1272,19 +1475,16 @@
                     </div>
                 </div>
 
-                <!-- Calico Coding Competition -->
+                <!-- AI Trading Agents -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/calico-cert.jpg" alt="Calico Coding Competition">
-                        <div class="cert-overlay">
-                            <span class="cert-badge">Competition</span>
-                        </div>
+                        <img src="assets/images/AI Trading Agents.png" alt="AI Trading Agents" loading="lazy">
                     </div>
                     <div class="certification-content">
-                        <h4 class="certification-title">Calico Coding Competition</h4>
-                        <p class="certification-issuer">Issued by Calico</p>
+                        <h4 class="certification-title">AI Trading Agents</h4>
+                        <p class="certification-issuer">Issued by LabLab.ai</p>
                         <div class="certification-footer">
-                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_calico2025-nextgenbuilders-codingcompetition-activity-7406317838761816064-0fgg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                            <a href="https://lablab.ai/u/@Pebble_Catalystc6qt/ai-hackathons/ai-trading-agents/certificate"
                                 target="_blank" class="btn-text-icon">
                                 <span>View Certificate</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1298,19 +1498,17 @@
                     </div>
                 </div>
 
-                <!-- Meta Hacker Cup -->
+                <!-- Launch and Fund Your Own Startup - Edition 1 -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/meta-cert.jpg" alt="Meta Hacker Cup">
-                        <div class="cert-overlay">
-                            <span class="cert-badge">Competition</span>
-                        </div>
+                        <img src="assets/images/Launch and Fund Your Own Startup-Edition 1.png"
+                            alt="Launch and Fund Your Own Startup - Edition 1" loading="lazy">
                     </div>
                     <div class="certification-content">
-                        <h4 class="certification-title">Meta Hacker Cup</h4>
-                        <p class="certification-issuer">Issued by Meta</p>
+                        <h4 class="certification-title">Launch and Fund Your Own Startup — Edition 1</h4>
+                        <p class="certification-issuer">Issued by LabLab.ai</p>
                         <div class="certification-footer">
-                            <a href="https://www.linkedin.com/posts/muhammad-awais-75a786327_metahackercup-meta-programming-activity-7395764491256401920-rImP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKEuLYBusi7a5gODX2Zjs8a0eVaVsqJye8"
+                            <a href="https://lablab.ai/u/@Pebble_Catalystc6qt/ai-hackathons/launch-fund-ai-meets-robotics/certificate"
                                 target="_blank" class="btn-text-icon">
                                 <span>View Certificate</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1340,7 +1538,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <img src="assets/images/Coursera XXC90KFBCNOL-1.png"
-                            alt="Microsoft AI & ML Engineering Professional Certificate">
+                            alt="Microsoft AI & ML Engineering Professional Certificate" loading="lazy">
                         <div class="cert-overlay">
                             <span class="cert-badge">Professional Certificate</span>
                         </div>
@@ -1367,7 +1565,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <img src="assets/images/ml-course-cert.jpg"
-                            alt="Machine Learning, Data Science & AI Engineering with Python">
+                            alt="Machine Learning, Data Science & AI Engineering with Python" loading="lazy">
                         <div class="cert-overlay">
                             <span class="cert-badge">Course</span>
                         </div>
@@ -1394,7 +1592,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <img src="assets/images/rag-course-cert.jpg"
-                            alt="Complete RAG Bootcamp: Build, Optimize, and Deploy AI Apps">
+                            alt="Complete RAG Bootcamp: Build, Optimize, and Deploy AI Apps" loading="lazy">
                         <div class="cert-overlay">
                             <span class="cert-badge">Course</span>
                         </div>
@@ -1421,7 +1619,7 @@
                 <div class="certification-card">
                     <div class="certification-image">
                         <img src="assets/images/ai-engineer-course-cert.jpg"
-                            alt="The AI Engineer Course 2026: Complete AI Engineer Bootcamp">
+                            alt="The AI Engineer Course 2026: Complete AI Engineer Bootcamp" loading="lazy">
                         <div class="cert-overlay">
                             <span class="cert-badge">Course</span>
                         </div>
@@ -1447,7 +1645,7 @@
                 <!-- Foundations of AI and Machine Learning by Microsoft -->
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="assets/images/microsoft-ai-cert.jpeg" alt="Foundations of AI and Machine Learning">
+                        <img src="assets/images/microsoft-ai-cert.jpeg" alt="Foundations of AI and Machine Learning" loading="lazy">
                         <div class="cert-overlay">
                             <span class="cert-badge">Course</span>
                         </div>
@@ -1476,62 +1674,7 @@
     <!-- Experience Section -->
 
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-subtitle">Reviews</h2>
-                <h3 class="section-title">What <span class="gradient-text">Clients Say</span></h3>
-                <p class="section-description">Feedback from people I've worked with</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Exceptional AI expertise. Delivered a production-ready ML system
-                        that exceeded our expectations. Highly recommended for any AI project."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div class="author-info">
-                            <span class="author-name">John Doe</span>
-                            <span class="author-role">CTO, Tech Company</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "Outstanding work on our NLP project. Great communication and
-                        delivered ahead of schedule with excellent documentation."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <span class="author-name">Sarah Miller</span>
-                            <span class="author-role">Product Manager</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "His data science skills transformed our analytics capabilities.
-                        The predictive models he built are now core to our operations."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AK</div>
-                        <div class="author-info">
-                            <span class="author-name">Alex Kim</span>
-                            <span class="author-role">Founder, Startup</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Testimonials Section removed -->
 
     <!-- FAQ Section -->
     <section class="section faq" id="faq">

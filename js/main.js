@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
         currentSlide.classList.remove('current-slide');
         targetSlide.classList.add('current-slide');
+        
+        // Pause previous video
+        const currentVideo = currentSlide.querySelector('video');
+        if (currentVideo) currentVideo.pause();
+        
+        // Play new video
+        const targetVideo = targetSlide.querySelector('video');
+        if (targetVideo) {
+            targetVideo.preload = "auto";
+            targetVideo.play().catch(e => console.log("Autoplay prevented"));
+        }
     };
 
     const updateDots = (currentDot, targetDot) => {
@@ -175,4 +186,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
         animate();
     }
+
+    // Video Lazy Loading and Playback on Scroll
+    const lazyVideos = document.querySelectorAll('video.lazy-video');
+    
+    if ('IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                
+                // If it's a carousel video, only play if it's the active slide
+                const isCarouselVideo = video.closest('.carousel-slide');
+                const isCurrentSlide = isCarouselVideo ? isCarouselVideo.classList.contains('current-slide') : true;
+
+                if (entry.isIntersecting && isCurrentSlide) {
+                    video.preload = "auto";
+                    video.play().catch(e => {
+                        console.log("Autoplay prevented", e);
+                    });
+                } else {
+                    video.pause();
+                }
+            });
+        }, {
+            rootMargin: '100px 0px',
+            threshold: 0.1
+        });
+
+        lazyVideos.forEach(video => {
+            videoObserver.observe(video);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyVideos.forEach(video => {
+            video.preload = "auto";
+            video.play().catch(e => {});
+        });
+    }
+
+    // Attempt to play the very first carousel video immediately
+    setTimeout(() => {
+        const firstVideo = document.querySelector('.carousel-slide.current-slide video');
+        if (firstVideo) {
+            firstVideo.preload = "auto";
+            firstVideo.play().catch(e => {});
+        }
+    }, 500);
 });
